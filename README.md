@@ -22,3 +22,38 @@ The CYK algorithm uses dynamic programming to build a table of all possible ways
 Open your terminal in the project directory and run:
 ```bash
 g++ -o cyk cyk.cpp
+```
+
+### 3. Execution
+* Run the compiled executable
+```bash
+./cyk
+```
+
+## Usage and Input Format
+
+When you run the program, follow these steps:
+
+1. **Start Symbol**: Enter the non-terminal you want to start from (e.g., `S`).
+2. **Define Rules**: Enter your CNF grammar rules one per line. Type `done` when you have finished adding all rules.
+   * For **$A \to BC$**: Type `A B C`
+   * For **$A \to a$**: Type `A a`
+3. **Parsing**: Once the grammar is loaded, you will be prompted for an `Input String`. The program will analyze it and display whether the string is **ACCEPTED** or **REJECTED**.
+
+### Example Session
+
+```text
+Enter the start symbol: S
+Enter rules one per line. Type 'done' when finished.
+S A B
+S B C
+A B A
+A a
+B C C
+B b
+C A B
+C a
+done
+
+Input String: baaba
+The string "baaba" is ACCEPTED by the grammar.
